@@ -1,0 +1,19 @@
+                               +---------------------+
+                               |       Clients       |
+                               +---------------------+
+                                         |
+                                         | (User Requests)
+                                         v
+                               +---------------------+
+                               |  NGINX Load Balancer|
+                               | (Public IP Address) |
+                               +---------------------+
+                              /          |          \
+                             /           |           \ (Distributes Requests)
+                            /            |            \
+                           v             v             v
+                 +-----------+   +-----------+   +-----------+
+                 |  Backend  |   |  Backend  |   |  Backend  |
+                 |  Server 1 |   |  Server 2 |   |  Server 3 |
+                 | (App Code) |   | (App Code) |   | (App Code) |
+                 +-----------+   +-----------+   +-----------+
